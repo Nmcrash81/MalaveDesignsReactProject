@@ -1,0 +1,57 @@
+/* NavBarz.css */
+
+.navbar {
+    padding: 3px;
+  }
+  
+  .navbar-brand {
+    color: black;
+    font-family: "FontTwo", sans-serif;
+    font-size: 60px;
+    padding-left: 10px;
+  }
+  
+  .navbar-divider {
+    border-left: 2px solid black;
+    height: 40px;
+    margin-left: -230px;
+    margin-right: -230px;
+  }
+  
+  .navbar-nav {
+    font-family: "FontOne", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .nav-link {
+    color: black;
+    padding: 0 15px;
+  }
+  
+  .nav-item-signin {
+    font-family: "FontOne";
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    padding: 0 15px;
+  }
+  
+  .call-button {
+    font-family: "FontOne";
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .call-button span {
+    margin-left: 5px;
+    color: blue;
+    font-weight: bolder;
+  }
+  
