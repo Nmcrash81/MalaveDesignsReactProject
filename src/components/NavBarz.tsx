@@ -2,36 +2,40 @@ import React from "react";
 import NavBarImage from "../assets/images/NavBarImage.jpeg";
 import "../assets/Fonts/fonts.css";
 import "../assets/Styles/NavBarz.css";
+import { Link } from "react-router-dom";
 
-const NavBar: React.FC = () => {
+const NavBar:React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Malave Designs
-        </a>
+        </Link>
         <div className="navbar-divider"></div>
         <div className="d-flex">
           <ul className="navbar-nav me-auto align-items-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#gallery">
+          <li className="nav-item">
+              <Link className="nav-link" to="/Gallery">
                 Gallery
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#pricing">
+              <Link className="nav-link" to="/Pricing">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
+              <Link className="nav-link" to="/Services">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#build">
                 Build Your Kitchen
               </a>
+            </li>
+            <li>
+          <Link className="nav-link" to="/AboutUs">About</Link> {/* onClick={openGallery} */}
             </li>
           </ul>
         </div>

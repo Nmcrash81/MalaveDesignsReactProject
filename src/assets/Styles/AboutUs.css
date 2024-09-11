@@ -1,0 +1,99 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+  padding: 40px 20px;
+  font-family: "FontOne", sans-serif;
+  background-color: #f4f4f9; /* Light neutral background */
+  color: #333; /* Darker text for contrast */
+  border-bottom: 2px solid #ddd; /* Adds a subtle separator */
+}
+
+.introduction h1 {
+  word-spacing: 1rem;
+  font-family: FontTwo, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-decoration: underline #2c3e50;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  color: #2c3e50; /* Darker color for the header */
+}
+
+.introduction p {
+  font-size: 1.3rem;
+  max-width: 800px; /* Limits the width for readability */
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #555; /* Softer text color */
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* More spacing for a cleaner look */
+  padding: 20px;
+  margin-top: 40px;
+  font-family: "FontOne", sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures images are neatly contained */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Adds a lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhances shadow on hover */
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Ensures all images have a uniform height */
+  object-fit: cover; /* Maintains aspect ratio while covering the area */
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left; 
+}
+
+.card-content h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #2c3e50; /* Consistent with the introduction header */
+}
+
+.card-content p {
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.AboutUs-modal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.openGallery {
+  color: white;
+  font-family: "FontOne", sans-serif;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin-top: 30px;
+  font-size: 20px;
+  background-color: #2c3e50; /* Matches the modern color scheme */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.openGallery:hover {
+  background-color: #1a252f; /* Darker shade for hover */
+}

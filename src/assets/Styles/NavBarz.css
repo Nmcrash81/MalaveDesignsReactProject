@@ -2,6 +2,11 @@
 
 .navbar {
     padding: 3px;
+    position: sticky;
+    top: 0;
+    width: 100%;  /* Ensure it spans the entire width */
+    z-index: 1000;  /* Keeps the navbar on top of other content */
+    background-color: white;
   }
   
   .navbar-brand {
@@ -14,6 +19,7 @@
   .navbar-divider {
     border-left: 2px solid black;
     height: 40px;
+    padding-left: 10px;
     margin-left: -230px;
     margin-right: -230px;
   }
