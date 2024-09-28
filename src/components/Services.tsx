@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import "../assets/Styles/Services.css";
 import service1 from "../assets/images/service1.jpeg";
 import service2 from "../assets/images/service2.jpeg";
@@ -49,7 +49,7 @@ const servicesData = [
   {
     title: "Kitchen Design Software",
     description:
-      "Our software allows you to design your kitchen with real-time layouts, styles, and finishes.",
+      "Kithenplanner.net software allows you to design your kitchen with real-time layouts, styles, and finishes.",
     features:
       "User-friendly interface, realistic 3D modeling, instant revisions.",
     image: service4,
@@ -87,12 +87,16 @@ const servicesData = [
   },
 ];
 
-const Services: React.FC = () => {
+interface servicesProps {
+  styles?: {[key: string]: CSSProperties}
+}
+
+const Services: React.FC<servicesProps> = ({ styles }) => {
   return (
-    <section className="services-section">
-      <div className="introduction">
-        <h1>Services</h1>
-        <p>
+    <section>
+      <div style={styles?.introduction} className="introduction">
+        <h1 style={styles?.introductionh1}>Services</h1>
+        <p style={styles?.introductionP}>
           At Malave Designs, we believe that every kitchen is the heart of the
           home, and we're dedicated to making your dream kitchen a reality. Our
           comprehensive range of services is designed to cater to every aspect
@@ -100,8 +104,8 @@ const Services: React.FC = () => {
           the final touches, we blend innovative technology, superior
           craftsmanship, and meticulous attention to detail to deliver results
           that exceed expectations. Whether you're envisioning a modern
-          makeover, custom cabinetry, or exploring our cutting-edge design
-          software, we are here to guide you through every step of the process.
+          makeover, custom cabinetry, or exploring the cutting-edge design
+          software from kitchenplanner.net, we are here to guide you through every step of the process.
           Discover the services that set us apart and learn how we turn your
           vision into a stunning, functional space that reflects your unique
           style and needs.

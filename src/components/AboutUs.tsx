@@ -1,47 +1,26 @@
-import React from 'react';
-import { CSSTransition } from 'react-transition-group';
-import '../assets/Fonts/fonts.css';
-import '../assets/Styles/AboutUs.css';
-import AboutUs1 from '../assets/images/AboutUs1.webp';
-import AboutUs2 from '../assets/images/AboutUs2.webp';
-import AboutUs3 from '../assets/images/AboutUs3.jpg';
-import AboutUs4 from '../assets/images/AboutUs4.webp';
-import AboutUs5 from '../assets/images/AboutUs5.jpg';
-import AboutUs6 from '../assets/images/AboutUs6.jpg';
+import React, { CSSProperties } from "react";
+import { CSSTransition } from "react-transition-group";
+import "../assets/Fonts/fonts.css";
+import "../assets/Styles/AboutUs.css";
+import AboutUs1 from "../assets/images/AboutUs1.webp";
+import AboutUs2 from "../assets/images/AboutUs2.webp";
+import AboutUs3 from "../assets/images/AboutUs3.jpg";
+import AboutUs4 from "../assets/images/AboutUs4.webp";
+import AboutUs5 from "../assets/images/AboutUs5.jpg";
+import AboutUs6 from "../assets/images/AboutUs6.jpg";
 import { Link } from "react-router-dom";
 
-
-// Define the props type including onClose function
 interface AboutUsProps {
-  onClose: () => void;
+  styles?: { [key: string]: CSSProperties };
 }
 
-const AboutUs: React.FC = () => {   {/* <AboutUsProps> = ({ onClose }) => { */}
+const AboutUs: React.FC<AboutUsProps> = ({ styles }) => {
   return (
-    <CSSTransition in={true} timeout={500} classNames="AboutUs-modal" appear unmountOnExit>
-      <div className="AboutUs-modal show">
-        {/* <button
-          className="AboutUsButton"
-         onClick={onClose}  Use the onClose prop to close the modal
-          style={{
-            position: "absolute",
-            top: '10px',
-            right: '10px',
-            height: '30px',
-            width: '60px',
-            fontFamily: 'FontOne, sans-serif',
-            fontWeight: 'bold',
-            fontSize: '1.3rem',
-            border: 'none',
-            backgroundColor: 'white',
-            zIndex: 1001,
-          }}
-        >
-          Close
-        </button> */}
-        <div className="introduction">
-          <h1>About Us</h1>
-          <p>
+
+      <section>
+        <div style={styles?.introduction} className="introduction">
+          <h1 style={styles?.introductionh1} className="introductionh1">About Us</h1>
+          <p style={styles?.introductionP} className="introductionp">
             At Malave Designs, we are dedicated to transforming your vision into
             reality, creating the kitchen of your dreams with exceptional
             craftsmanship and attention to detail. Our commitment to quality
@@ -127,15 +106,13 @@ const AboutUs: React.FC = () => {   {/* <AboutUsProps> = ({ onClose }) => { */}
           </div>
         </div>
 
-      <div className="introduction">
-        <p>If you want to learn more please look at our Gallery!</p>
-        <Link className="btn btn-primary openGallery" to="/Gallery">
-                Open Gallery
-              </Link>
-          </div>
-
-      </div>
-    </CSSTransition>
+        <div className="introduction">
+          <p>If you want to learn more please look at our Gallery!</p>
+          <Link className="btn btn-primary openGallery" to="/Gallery">
+            Open Gallery
+          </Link>
+        </div>
+      </section>
   );
 };
 

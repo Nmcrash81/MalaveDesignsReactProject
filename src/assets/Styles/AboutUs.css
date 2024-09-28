@@ -1,35 +1,3 @@
-.introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 50vh;
-  padding: 40px 20px;
-  font-family: "FontOne", sans-serif;
-  background-color: #f4f4f9; /* Light neutral background */
-  color: #333; /* Darker text for contrast */
-  border-bottom: 2px solid #ddd; /* Adds a subtle separator */
-}
-
-.introduction h1 {
-  word-spacing: 1rem;
-  font-family: FontTwo, sans-serif;
-  font-size: 3.5rem;
-  font-weight: 600;
-  text-decoration: underline #2c3e50;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-  color: #2c3e50; /* Darker color for the header */
-}
-
-.introduction p {
-  font-size: 1.3rem;
-  max-width: 800px; /* Limits the width for readability */
-  line-height: 1.6;
-  margin-top: 20px;
-  color: #555; /* Softer text color */
-}
 
 .infoCards {
   display: grid;

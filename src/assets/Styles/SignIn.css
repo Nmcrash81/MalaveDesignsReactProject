@@ -1,0 +1,43 @@
+.modal-content {
+    color: white;
+    background-color: rgb(55, 55, 55);
+    width: 30%;
+    font-family: FontOne, sans-serif;
+}
+
+.modal-content h1 {
+    margin-left: auto;
+    font-family: FontOne, sans-serif;
+}
+
+.form-floating {
+    color: white;
+}
+
+.form-control {
+    background-color: rgb(55, 55, 55);
+}
+
+.bi-github {
+    color: white;
+}
+
+.bi-twitter-x {
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.bi-facebook {
+    color: #316FF6;
+}
+
+.biText {
+    color: white;
+}
+
+.forgotPassword, .signUpButton {
+    text-decoration: none;
+}

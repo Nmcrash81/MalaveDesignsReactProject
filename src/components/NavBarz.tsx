@@ -1,58 +1,77 @@
 import React from "react";
-import NavBarImage from "../assets/images/NavBarImage.jpeg";
 import "../assets/Fonts/fonts.css";
 import "../assets/Styles/NavBarz.css";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
-const NavBar:React.FC = () => {
+interface SignInProps {
+  onOpen: () => void;
+}
+
+const NavBar: React.FC<SignInProps> = ({ onOpen }) => {
+
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid d-flex justify-content-between align-items-center">
+      <div className="container-fluid">
+        {/* Brand */}
         <Link className="navbar-brand" to="/">
           Malave Designs
         </Link>
         <div className="navbar-divider"></div>
-        <div className="d-flex">
-          <ul className="navbar-nav me-auto align-items-center">
-          <li className="nav-item">
+
+        {/* Collapsible nav for mobile */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+         {/* Links */}
+         <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mx-auto">
+            <motion.li whileHover={{ scale: 1.2 }} className="nav-item">
               <Link className="nav-link" to="/Gallery">
                 Gallery
               </Link>
-            </li>
-            <li className="nav-item">
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.2 }} className="nav-item">
               <Link className="nav-link" to="/Pricing">
                 Pricing
               </Link>
-            </li>
-            <li className="nav-item">
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.2 }} className="nav-item">
               <Link className="nav-link" to="/Services">
                 Services
               </Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#build">
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.2 }} className="nav-item">
+              <Link className="nav-link" to="/Build-Your-Kitchen">
                 Build Your Kitchen
-              </a>
-            </li>
-            <li>
-          <Link className="nav-link" to="/AboutUs">About</Link> {/* onClick={openGallery} */}
-            </li>
+              </Link>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.2 }} className="nav-item">
+              <Link className="nav-link" to="/AboutUs">
+                About
+              </Link>
+            </motion.li>
           </ul>
         </div>
+
+        {/* Right-side buttons */}
         <div className="d-flex align-items-center">
-          <li className="nav-item" style={{ listStyle: "none" }}>
-            <a className="nav-link nav-item-signin" href="#signin">
-              Sign In
-            </a>
-          </li>
-          <li className="nav-item" style={{ listStyle: "none" }}>
-            <a href="tel:8133163208" style={{ textDecoration: "none" }}>
-              <button className="call-button bg-light">
-                Call
-                <span>(813)-316-3208</span>
-              </button>
-            </a>
-          </li>
+          <button onClick={onOpen} className="btn btn-outline-primary mx-2">
+            Sign In
+          </button>
+          <a href="tel:8133163208" className="btn btn-outline-secondary mx-2">
+            Call <span>(813)-316-3208</span>
+          </a>
         </div>
       </div>
     </nav>

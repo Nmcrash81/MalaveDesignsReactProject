@@ -2,6 +2,7 @@
    control F or Command + F and search '/**'. **/
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/Fonts/fonts.css";
 import image1 from "../assets/images/kitchen1.png";
 import image2 from "../assets/images/kitchen2.jpeg";
@@ -9,9 +10,10 @@ import image3 from "../assets/images/kitchen3.jpeg";
 import image4 from "../assets/images/kitchen4.jpeg";
 import image5 from "../assets/images/kitchen5.jpeg";
 import image6 from "../assets/images/kitchen6.jpeg";
-import "../assets/Styles/HomePage.css"; // Assuming you've moved the inline styles to this CSS file
+import "../assets/Styles/HomePage.css";
 
-export const HomePage: React.FC= () => { //<{ openGallery: () => void }> = ({ openGallery }) => {
+export const HomePage: React.FC = () => {
+  //<{ openGallery: () => void }> = ({ openGallery }) => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
@@ -44,7 +46,6 @@ export const HomePage: React.FC= () => { //<{ openGallery: () => void }> = ({ op
       {/** The section below is going to be the Services section which will just 
           be explaining all the different services provided by the company. **/}
 
-
       <section id="services" className="services-section py-5 bg-light">
         <div className="container">
           <h2 className="text-center mb-5 services-title">Our Services</h2>
@@ -68,7 +69,7 @@ export const HomePage: React.FC= () => { //<{ openGallery: () => void }> = ({ op
               {
                 title: "Kitchen Design Software",
                 description:
-                  "Use our cutting-edge software to design your kitchen from the comfort of your home. Visualize your space and make decisions with ease.",
+                  "Thank's to the cutting-edge software from kitchenplanner.net we can help make your kitchen design come to life! From the comfort of your home, visualize your space and make decisions with ease.",
               },
               {
                 title: "Painless Remodel Process",
@@ -92,8 +93,12 @@ export const HomePage: React.FC= () => { //<{ openGallery: () => void }> = ({ op
             ))}
           </div>
         </div>
+        <div className="text-center">
+          <Link className="btn btn-primary see-more-button" to="/Gallery">
+            Get a Quote!
+          </Link>
+        </div>
       </section>
-
       {/** This is going to be my Gallery section which will just be
           displaying a set of images of different kitchens done by the
           company with a 'see more' button that will take you to the 
@@ -114,7 +119,9 @@ export const HomePage: React.FC= () => { //<{ openGallery: () => void }> = ({ op
             ))}
           </div>
           <div className="text-center">
-          <button className="btn btn-primary see-more-button">Open Gallery</button> {/*  onClick={openGallery} */}
+            <Link className="btn btn-primary see-more-button" to="/Gallery">
+              Open Gallery
+            </Link>
           </div>
         </div>
       </section>

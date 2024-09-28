@@ -1,63 +1,80 @@
-/* NavBarz.css */
-
+/* Styling the main navbar */
 .navbar {
-    padding: 3px;
-    position: sticky;
-    top: 0;
-    width: 100%;  /* Ensure it spans the entire width */
-    z-index: 1000;  /* Keeps the navbar on top of other content */
-    background-color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand styling */
+.navbar-brand {
+  color: black;
+  font-family: "FontTwo", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+/* Divider between brand and nav */
+.navbar-divider {
+  border-left: 2px solid black;
+  height: 50px;
+}
+
+/* Navbar links styling */
+.navbar-nav {
+  font-family: "FontOne", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Individual nav links */
+.nav-link {
+  color: black;
+  padding: 0 20px;
+  transition: color 0.3s ease;
+  margin-right: 15px;
+}
+
+/* Sign-in & Phone Number button */
+.btn-outline-primary, .btn-outline-secondary {
+  font-family: "FontOne", sans-serif;
+  font-size: 18px;
+  padding: 8px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  color: black;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:focus, .btn-outline-secondary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-outline-primary:hover, .btn-outline-secondary:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Media queries to handle mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px;
   }
-  
-  .navbar-brand {
-    color: black;
-    font-family: "FontTwo", sans-serif;
-    font-size: 60px;
-    padding-left: 10px;
-  }
-  
-  .navbar-divider {
-    border-left: 2px solid black;
-    height: 40px;
-    padding-left: 10px;
-    margin-left: -230px;
-    margin-right: -230px;
-  }
-  
+
   .navbar-nav {
-    font-family: "FontOne", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
   }
-  
-  .nav-link {
-    color: black;
-    padding: 0 15px;
+
+  .btn-outline-primary,
+  .btn-outline-secondary {
+    margin-top: 10px;
   }
-  
-  .nav-item-signin {
-    font-family: "FontOne";
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
-    padding: 0 15px;
-  }
-  
-  .call-button {
-    font-family: "FontOne";
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .call-button span {
-    margin-left: 5px;
-    color: blue;
-    font-weight: bolder;
-  }
-  
+}
